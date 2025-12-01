@@ -1,0 +1,31 @@
+.assigned {
+  max-width: 100%;
+  width: 100%;
+}
+
+.assigned h1 {
+  margin: 0 0 1em 0;
+  font-size: 1.2rem;
+}
+
+.section {
+  margin-bottom: 2em;
+}
+
+.section h2 {
+  margin: 0 0 0.5em 0;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.empty {
+  padding: 2em;
+  text-align: center;
+  opacity: 0.5;
+}

@@ -1,0 +1,40 @@
+.container {
+    max-width: 800px;
+    width: 95%;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(var(--text-color-rgb), 0.02);
+    border-radius: 16px;
+    border: 1px solid rgba(var(--text-color-rgb), 0.1);
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.header h1 {
+    margin: 0;
+    padding: 0;
+    border: none !important;
+    font-family: 'Sigmar', serif;
+    color: var(--brand-color);
+    font-size: 2rem;
+}
+
+.closeBtn {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+
+.closeBtn:hover {
+    opacity: 1;
+}

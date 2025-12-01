@@ -1,0 +1,21 @@
+.archive {
+  max-width: 100%;
+  width: 100%;
+}
+
+.archive h1 {
+  margin: 0 0 1em 0;
+  font-size: 1.2rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.empty {
+  padding: 2em;
+  text-align: center;
+  opacity: 0.5;
+}

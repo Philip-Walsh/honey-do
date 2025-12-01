@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  height: 30rem;
+  padding: 1rem;
+  margin: 1rem;
+  overflow-y: scroll;
+  max-width: 100%;
+  overflow: scroll;
+  z-index: 200;
+  scroll-behavior: smooth;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+main>section,
+main>article {
+  border: var(--debug) blue;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 0.5rem;
+  background-color: rgba(var(--text-color-rgb), 0.05);
+}
+
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+
+.bg::before,
+.bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  animation: spookyFade 5s ease-in-out infinite;
+}
+
+.bg::after {
+  z-index: 30;
+  animation: spookyFade 5s ease-in-out infinite reverse;
+}
+
+h1 {
+  padding: 2rem 2rem 1rem;
+  letter-spacing: 2px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  border: var(--debug) beige !important;
+  text-align: var(--text-align);
+}
+
+main article {
+  border: var(--debug) blue;
+  width: clamp(90%, 50%, 7.5em);
+  max-width: 30rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-direction: column;
+  place-items: center;
+}
+
+@media (width >=1350px) {
+  main section {
+    flex-flow: row wrap;
+    border: var(--debug) olive;
+  }
+
+  main article:nth-of-type(odd) section {
+    border: var(--debug) gray;
+    place-content: flex-end;
+  }
+
+  h1 {
+    width: 100%;
+  }
+}
+
+p {
+  border: var(--debug) pink !important;
+  width: clamp(45ch, 50%, 75ch);
+  margin: auto;
+  line-height: 1.5;
+  font-size: max(1.2rem, 1.2vw);
+  text-align: var(--text-align);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+main::-webkit-scrollbar {
+  width: 1.5rem;
+  transform: translateX(1.5rem);
+}
+
+main::-webkit-scrollbar-track {
+  background-color: rgba(var(--text-color-rgb), 0.3);
+  border-radius: 1rem;
+  transform: translateX(1.5rem);
+}
+
+main::-webkit-scrollbar-thumb {
+  background-color: rgba(var(--text-color-rgb), 0.3);
+  border-radius: 1rem;
+  width: 0.5rem;
+  max-height: 0.5rem;
+  margin: auto;
+  transform: translateX(1.5rem);
+}
+
+main::-webkit-scrollbar-thumb:hover {
+  background-color: var(--brand-color);
+  transform: translateX(1.5rem);
+}

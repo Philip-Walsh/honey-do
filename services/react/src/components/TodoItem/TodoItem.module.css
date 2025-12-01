@@ -1,0 +1,136 @@
+.todoItem {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border: 1px solid rgba(var(--text-color-rgb), 0.1);
+    border-radius: 8px;
+    margin-bottom: 12px;
+    background: rgba(var(--text-color-rgb), 0.02);
+    transition: all 0.2s ease;
+}
+
+.todoItem:hover {
+    border-color: var(--brand-color);
+    box-shadow: 0 4px 12px rgba(var(--text-color-rgb), 0.1);
+    transform: translateY(-2px);
+}
+
+.todoItem.completed {
+    background: rgba(var(--text-color-rgb), 0.05);
+    opacity: 0.7;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.checkbox {
+    transform: scale(1.2);
+    cursor: pointer;
+    accent-color: var(--brand-color);
+    flex-shrink: 0;
+}
+
+.mainContent {
+    flex: 1;
+    min-width: 0;
+}
+
+.titleRow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.todoId {
+    font-family: 'Doto', monospace;
+    font-size: 12px;
+    color: rgba(var(--text-color-rgb), 0.5);
+    font-weight: 600;
+}
+
+.todoName {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-color);
+    flex: 1;
+    font-family: 'Atkinson Hyperlegible Next', sans-serif;
+}
+
+.todoItem.completed .todoName {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.description {
+    font-size: 14px;
+    color: rgba(var(--text-color-rgb), 0.7);
+    margin-bottom: 8px;
+    line-height: 1.4;
+    font-family: 'Atkinson Hyperlegible Next', sans-serif;
+}
+
+.metadata {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    font-size: 12px;
+    color: rgba(var(--text-color-rgb), 0.6);
+    font-family: 'Atkinson Hyperlegible Next', sans-serif;
+}
+
+.tags {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    padding: 2px 8px;
+    background: var(--brand-color);
+    color: var(--bg-color);
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 500;
+    font-family: 'Doto', sans-serif;
+}
+
+.assignee,
+.location,
+.dueDate {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.recurring {
+    color: var(--brand-color);
+    font-weight: 600;
+}
+
+.deleteBtn {
+    background: transparent;
+    color: #ff4757;
+    border: 1px solid #ff4757;
+    border-radius: 4px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.deleteBtn:hover {
+    background: #ff4757;
+    color: white;
+    transform: scale(1.1);
+}

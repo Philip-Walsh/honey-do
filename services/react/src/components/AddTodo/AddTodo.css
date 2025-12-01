@@ -1,0 +1,57 @@
+.add-todo-form {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+    padding: 20px;
+    background: rgba(var(--text-color-rgb), 0.05);
+    border: 1px solid rgba(var(--text-color-rgb), 0.1);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(var(--text-color-rgb), 0.1);
+}
+
+.add-todo-input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 2px solid rgba(var(--text-color-rgb), 0.2);
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.2s ease;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.add-todo-input:focus {
+    outline: none;
+    border-color: var(--brand-color);
+}
+
+.add-todo-input::placeholder {
+    color: rgba(var(--text-color-rgb), 0.5);
+}
+
+.add-todo-btn {
+    padding: 12px 24px;
+    background: var(--brand-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.add-todo-btn:hover:not(:disabled) {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.add-todo-btn:active:not(:disabled) {
+    transform: translateY(1px);
+}
+
+.add-todo-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}

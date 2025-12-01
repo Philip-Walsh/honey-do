@@ -1,0 +1,38 @@
+.nav {
+  max-width: 100vw;
+}
+
+.navLinks {
+  display: flex;
+  place-content: space-evenly;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navButton {
+  border-radius: 1rem;
+  border: var(--debug) gray;
+  display: flex;
+  place-content: space-between;
+  place-items: center;
+  outline: transparent;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  background: transparent;
+  color: var(--text-color);
+  font-family: 'Sigmar', serif;
+  font-size: 1.2rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.navButton:hover {
+  background-color: var(--brand-color);
+  color: var(--bg-color);
+}
+
+.navButton.active {
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+}
